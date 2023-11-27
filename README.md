@@ -1,7 +1,15 @@
 # Sonarqube-Demo
 A repository with explanation about Sonarqube functionalities.
-
+<br /><br />
 Language: Pt-Br
+<br /><br />
+⚙️ **SonarQube**: Ferramenta de análise do código estático.
+
+<p align="center">
+  <a href="https://www.sonarsource.com/products/sonarqube/" target="_blank">
+    <img src="https://wiki.eclipse.org/images/8/88/Sonarqube.png" alt="SonarQube Logo"></img>
+  </a>
+</p>
 
 ## O que é SAST?
 A análise de código estático consiste em realizar **uma série de verificações em seu código fonte** de forma automatizada.
