@@ -11,8 +11,6 @@ Language: Pt-Br
   </a>
 </p>
 
-[Google](https://google.com){target="_blank"}
-
 ## O que é SAST?
 A análise de código estático consiste em realizar **uma série de verificações em seu código fonte** de forma automatizada.
 
