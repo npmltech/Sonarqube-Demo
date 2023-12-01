@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "us-west-2" # Substitua pela região desejada
 }
 
 resource "aws_ecs_cluster" "sonarqube_cluster" {
