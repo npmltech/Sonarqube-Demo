@@ -3,21 +3,22 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: openjdk11  # Defina a versão do Java, caso necessário
+      ## ---  Defina a versão do Java, caso necessário ---
+      java: openjdk11
 
   build:
     commands:
-      # Baixando e descompactando o SonarQube Scanner
-	  - wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
+      ## --- Baixando e descompactando o SonarQube Scanner ---
+      - wget https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-linux.zip
       - unzip sonar-scanner-cli-5.0.1.3006-linux.zip
-	  
-      # Configuração das variáveis de ambiente para o SonarQube Scanner
+        
+      ## --- Configuração das variáveis de ambiente para o SonarQube Scanner ---
       - export PATH=$PATH:$PWD/sonar-scanner-4.6.2.2472-linux/bin
 
-      # Comando para a execução da análise do código com SonarQube Scanner
-	  # O resultado é publicado no SonarQube indicado no parâmetro host
+      ## --- Comando para a execução da análise do código com SonarQube Scanner ---
+      ## ---  O resultado é publicado no SonarQube indicado no parâmetro host ---
       - sonar-scanner \
-          -Dsonar.projectKey=my_project_key \
-          -Dsonar.sources=./src \
-          -Dsonar.host.url=http://endereco_do_seu_sonarqube_no_ecs:9000 \
-          -Dsonar.login=seu_token_de_acesso
+        -Dsonar.projectKey=my_project_key \
+        -Dsonar.sources=./src \
+        -Dsonar.host.url=http://endereco_do_seu_sonarqube_no_ecs:9000 \
+        -Dsonar.login=seu_token_de_acesso
