@@ -1,0 +1,28 @@
+--- Todas as validações realizadas pelo Quality Gate do SonarQube ---
+
+1. Coverage (Cobertura): Mede a porcentagem de código-fonte que é coberta por testes automatizados.
+Ação: Aumentar a cobertura de teste para reduzir lacunas no código não testado.
+
+2. Code Smells (Problemas de Código): Identifica padrões ou práticas no código que podem indicar problemas de manutenibilidade ou design.
+Ação: Corrigir ou refatorar partes do código que possuem muitos "code smells".
+
+3. Bugs (Bugs): Identifica bugs potenciais no código-fonte.
+Ação: Corrigir imediatamente bugs identificados para melhorar a estabilidade do software.
+
+4. Vulnerabilities (Vulnerabilidades):Identifica possíveis vulnerabilidades de segurança no código.
+Ação: Corrigir vulnerabilidades o mais rápido possível para reduzir riscos de segurança.
+
+5. Security Hotspots (Ponto Crítico de Segurança): Identifica áreas do código que possam ser mais propensas a problemas de segurança.
+Ação: Revisar e refatorar essas áreas críticas para mitigar possíveis riscos.
+
+6. Duplicated Lines (% de Linhas Duplicadas): Identifica a porcentagem de linhas de código que são duplicadas no código-fonte.
+Ação: Reduzir a duplicação de código para melhorar a manutenibilidade e facilitar futuras atualizações.
+
+7. Complexity (Complexidade): Mede a complexidade do código-fonte.
+Ação: Reduzir a complexidade do código, se possível, para torná-lo mais compreensível e fácil de manter.
+
+8. Maintainability Rating (Índice de Manutenibilidade): Fornece uma avaliação global da facilidade de manutenção do código.
+Ação: Trabalhar para melhorar o índice de manutenibilidade, abordando os problemas identificados.
+
+9. Technical Debt (Dívida Técnica): Estima o esforço necessário para resolver os problemas identificados no código.
+Ação: Reduzir a dívida técnica priorizando e corrigindo os problemas mais críticos.
