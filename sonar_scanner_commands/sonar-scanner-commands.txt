@@ -1,0 +1,26 @@
+sonar-scanner \
+  -Dsonar.projectKey=my_project_key \
+  -Dsonar.projectName="My Project" \
+  -Dsonar.projectVersion=1.0 \
+  -Dsonar.sources=./src \
+  -Dsonar.exclusions=**/*.xml,**/*.properties \
+  -Dsonar.tests=./tests \
+  -Dsonar.language=java \
+  -Dsonar.java.binaries=./target/classes \
+  -Dsonar.java.libraries=./lib/*.jar \
+  -Dsonar.coverage.exclusions=./src/test/** \
+  -Dsonar.issue.ignore.multicriteria="component=**/Generated*.java,file=*Controller.java" \
+  -Dsonar.login=seu_token_de_acesso \
+  -Dsonar.host.url=http://endereco_do_seu_sonarqube_no_ecs:9000 \
+  -Dsonar.branch.name=nome_da_branch \
+  -Dsonar.analysis.mode=preview \
+  -Dsonar.pullrequest.base=master \
+  -Dsonar.pullrequest.key=123 \
+  -Dsonar.verbose=true \
+  -Dsonar.showProfiling=true \
+  -Dsonar.scm.provider=git \
+  -Dsonar.scm.disabled=false \
+  -Dsonar.scm.revision=commit_hash \
+  -Dsonar.scm.blame.enabled=true
+
+# Para visualizar outros comandos, utlilize a instrução sonar-scanner -h
