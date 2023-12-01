@@ -14,7 +14,7 @@ resource "aws_ecs_task_definition" "sonarqube_task" {
   container_definitions = jsonencode([
     {
       name  = "sonarqube-container"
-      image = "sonarqube:latest"  # Substitua pelo nome e versão da imagem do SonarQube
+      image = "sonarqube:community"
 
       # Configurações específicas do SonarQube, como portas, variáveis de ambiente, etc.
       portMappings = [
