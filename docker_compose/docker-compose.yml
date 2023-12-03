@@ -2,6 +2,7 @@ version: "3.5"
 
 services:
   sonarqube:
+    container_name: quality_gate
     image: sonarqube:community
     platform: linux/x86_64
     depends_on:
@@ -9,7 +10,7 @@ services:
       - db
     environment:
       - SONAR_JDBC_USERNAME=sonar # usuário default: admin
-      - SONAR_JDBC_PASSWORD=sonar # senha default: sonar
+      - SONAR_JDBC_PASSWORD=sonar # senha default: admin
       - SONAR_JDBC_URL=jdbc:postgresql://db:5432/sonar
       - sonar.search.javaAdditionalOpts="-Dnode.store.allow_mmap=false"
     volumes:
@@ -31,6 +32,7 @@ services:
     networks:
       - sonarnet
   init:
+    container_name: init_sh
     image: bash
     privileged: true
     user: root
@@ -39,6 +41,7 @@ services:
     command: [ "sh", "-e", "/mnt/init.sh" ]
 
   db:
+    container_name: postgres_db
     image: postgres:13
     platform: linux/x86_64
     environment:
