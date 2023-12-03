@@ -47,8 +47,10 @@ services:
     volumes:
       - postgresql:/var/lib/postgresql
       - postgresql_data:/var/lib/postgresql/data
+    expose:
+      - "5433"
     ports:
-      - "5444:5432"
+      - "5433:5432"
     networks:
       - sonarnet
 
